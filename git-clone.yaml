@@ -1,0 +1,11 @@
+---
+  - name: GIT CLONE
+    hosts: all
+    become: yes
+    become_method: sudo
+    become_user: ec2-user
+    tasks:
+      - name: CLONE
+        ansible.builtin.git:
+          repo: 'https://github.com/caglayan45/FabricMultiHostDeployment.git'
+          dest: /home/ec2-user/FabricMultiHostDeployment

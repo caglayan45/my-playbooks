@@ -1,0 +1,16 @@
+---
+ - name: npm kurulumu
+   hosts: all
+   become: yes
+   become_method: sudo
+   tasks:
+     - name: epel release kurulumu
+       yum:
+         name: epel-release
+         state: present
+
+     - name: npm KURULUMU
+       yum:
+         name: npm
+         state: present
+
